@@ -5,6 +5,14 @@ var number = "1234567890";
 var special = "~!@#$%^&*()_+=-`{}|[]:;'<>?,./";
 var pw = ""; 
 
+// work on for loop and randomness
+var generatePassword = function() {
+  for ( var i = 0, n = lower.length; i < lengthPrompt; i++ ){
+    pw += lower.charCodeAt(Math.floor(Math.random() * n ));
+  }
+  return pw;
+}
+
 // prompts
 var initial = function() {
   var lengthPrompt = window.prompt("How long would you like your password to be?");
@@ -15,8 +23,6 @@ var initial = function() {
     }
 
   var upperPrompt = window.confirm("Would you like to include uppercase letters?");
-    // if yes, add upper to lower, continue to next prompt
-    // if no, don't add and continue to next prompt
     if (upperPrompt){
       lower += upper;
     }
@@ -31,11 +37,10 @@ var initial = function() {
       lower += special;
     }
   
-    
-
+  // call pw generator function
+  generatePassword();
+  console.log(pw);
 }
-// work on for loop and randomness
-
 
 
 // Get references to the #generate element
