@@ -8,9 +8,11 @@ var pw = "";
 // prompts
 var initial = function() {
   var lengthPrompt = window.prompt("How long would you like your password to be?");
-  // pw has to be between 8-128
-  // continue onto next prompt if within limit
-  // if not return a msg and return to initial prompt
+    // pw has to be between 8-128
+    if (lengthPrompt > 128 || lengthPrompt < 8){
+      window.alert("Uh-oh! The password has to be between 8 - 128! Try again :)");
+      initial();
+    }
 
   var upperPrompt = window.confirm("Would you like to include uppercase letters?");
   // if yes, add upper to lower, continue to next prompt
