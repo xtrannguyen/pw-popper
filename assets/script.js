@@ -4,18 +4,19 @@ var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var number = "1234567890";
 var special = "~!@#$%^&*()_+=-`{}|[]:;'<>?,./";
 var pw = ""; 
+var lengthPrompt;
 
 // work on for loop and randomness
 var generatePassword = function() {
   for ( var i = 0, n = lower.length; i < lengthPrompt; i++ ){
-    pw += lower.charCodeAt(Math.floor(Math.random() * n ));
+    pw += lower.charAt(Math.floor(Math.random() * n));
   }
   return pw;
 }
 
 // prompts
 var initial = function() {
-  var lengthPrompt = window.prompt("How long would you like your password to be?");
+  lengthPrompt = window.prompt("How long would you like your password to be?");
     // pw has to be between 8-128
     if (lengthPrompt > 128 || lengthPrompt < 8){
       window.alert("Uh-oh! The password has to be between 8 - 128! Try again :)");
@@ -39,6 +40,7 @@ var initial = function() {
   
   // call pw generator function
   generatePassword();
+  console.log(lower);
   console.log(pw);
 }
 
