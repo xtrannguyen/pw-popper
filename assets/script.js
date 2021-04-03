@@ -6,6 +6,7 @@ var special = "~!@#$%^&*()_+=-`{}|[]:;'<>?,./";
 var pw = ""; 
 var lengthPrompt;
 
+
 // work on for loop and randomness
 var generatePassword = function() {
   for ( var i = 0, n = lower.length; i < lengthPrompt; i++ ){
@@ -22,22 +23,22 @@ var initial = function() {
       window.alert("Uh-oh! The password has to be between 8 - 128! Try again :)");
       initial();
     }
+    else {
+      var upperPrompt = window.confirm("Would you like to include uppercase letters?");
+        if (upperPrompt){
+          lower += upper;
+        }
 
-  var upperPrompt = window.confirm("Would you like to include uppercase letters?");
-    if (upperPrompt){
-      lower += upper;
-    }
+      var numberPrompt = window.confirm("Would you like to include numbers?");
+        if (numberPrompt){
+          lower += number;
+        }
 
-  var numberPrompt = window.confirm("Would you like to include numbers?");
-    if (numberPrompt){
-      lower += number;
+      var specialPrompt = window.confirm("Would you like to include special characters?");
+        if (specialPrompt){
+          lower += special;
+        }
     }
-
-  var specialPrompt = window.confirm("Would you like to include special characters?");
-    if (specialPrompt){
-      lower += special;
-    }
-  
   // call pw generator function
   generatePassword();
 }
