@@ -7,18 +7,18 @@ var pw = "";
 
 // prompts
 var initial = function() {
-  var lengthPrompt = window.alert("How long would you like your password to be?");
+  var lengthPrompt = window.prompt("How long would you like your password to be?");
   // pw has to be between 8-128
   // continue onto next prompt if within limit
   // if not return a msg and return to initial prompt
 
-  var upperPrompt = window.alert("Would you like to include uppercase letters?");
+  var upperPrompt = window.confirm("Would you like to include uppercase letters?");
   // if yes, add upper to lower, continue to next prompt
   // if no, don't add and continue to next prompt
 
-  var numberPrompt = window.alert("Would you like to include numbers?");
+  var numberPrompt = window.confirm("Would you like to include numbers?");
 
-  var specialPrompt = window.alert("Would you like to include special characters?");
+  var specialPrompt = window.confirm("Would you like to include special characters?");
 
 }
 // work on for loop and randomness
