@@ -40,8 +40,6 @@ var initial = function() {
   
   // call pw generator function
   generatePassword();
-  console.log(lower);
-  console.log(pw);
 }
 
 
