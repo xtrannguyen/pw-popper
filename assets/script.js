@@ -3,6 +3,7 @@ var lower = "abcdefghijklmnopqrstuvwxyz";
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var number = "1234567890";
 var special = "~!@#$%^&*()_+=-`{}|[]:;'<>?,./";
+var pw = ""; 
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
