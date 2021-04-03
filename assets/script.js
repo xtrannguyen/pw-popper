@@ -15,12 +15,23 @@ var initial = function() {
     }
 
   var upperPrompt = window.confirm("Would you like to include uppercase letters?");
-  // if yes, add upper to lower, continue to next prompt
-  // if no, don't add and continue to next prompt
+    // if yes, add upper to lower, continue to next prompt
+    // if no, don't add and continue to next prompt
+    if (upperPrompt){
+      lower += upper;
+    }
 
   var numberPrompt = window.confirm("Would you like to include numbers?");
+    if (numberPrompt){
+      lower += number;
+    }
 
   var specialPrompt = window.confirm("Would you like to include special characters?");
+    if (specialPrompt){
+      lower += special;
+    }
+  
+    
 
 }
 // work on for loop and randomness
